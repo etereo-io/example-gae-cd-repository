@@ -4,4 +4,4 @@ This repository serves as an example of how to set up 3 different environments f
 
 The repository deploys a NodeJS application that serves static files (or an API if you want to change it), but the concepts can be reused for any other language.
 
-The blog post explaining the process can be found [here]()
+The blog post explaining the process can be found [here](https://blog.etereo.io/multi-environment-deployment-with-google-app-engine-and-github-actions-351041ced92a?sk=b0d2c26304f452602f5684a3cc471f04) and [here](https://blog.etereo.io/deploying-a-node-application-in-google-app-engine-with-github-actions-2bd0d4e443db?sk=700209e9b13de262cd6217c53b413ac4)
