@@ -1,0 +1,9 @@
+dispatch:
+- url: "app-dev.myproject.com/*"
+  service: app-dev
+- url: "app-staging.myproject.com/*"
+  service: app-staging
+- url: "app.myproject.com/*"
+  service: app
+- url: "*/.*"
+  service: default

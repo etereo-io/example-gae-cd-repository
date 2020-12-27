@@ -1,0 +1,24 @@
+{
+  "name": "example-gae-cd-repository",
+  "version": "1.0.0",
+  "description": "Deploy in GAE",
+  "main": "generate-vars.js",
+  "scripts": {
+    "start": "node -r dotenv/config server",
+    "test:ci": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etereo-io/example-gae-cd-repository.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etereo-io/example-gae-cd-repository/issues"
+  },
+  "homepage": "https://github.com/etereo-io/example-gae-cd-repository#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

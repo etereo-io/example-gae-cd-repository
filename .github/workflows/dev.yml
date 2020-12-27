@@ -1,0 +1,31 @@
+name: Example Project - Development
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm install
+      - run: npm run test:ci
+        env:
+          CI: true
+      - name: Generate environment variables file
+        run: node generate-vars.js "${{ secrets.ENV_VARIABLES }}"
+      - name: Initialize Google Cloud SDK & Deploy
+        uses: etereo-io/deploy-gae-action@master
+        with:
+          gae_config_path: './app-dev.yaml'
+          service_account: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.PROJECT_ID }}
+  
