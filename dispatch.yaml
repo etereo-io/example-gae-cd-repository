@@ -4,6 +4,6 @@ dispatch:
 - url: "app-staging.myproject.com/*"
   service: app-staging
 - url: "app.myproject.com/*"
-  service: app
+  service: default
 - url: "*/.*"
   service: default
